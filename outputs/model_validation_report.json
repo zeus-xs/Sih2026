@@ -1,0 +1,85 @@
+{
+  "supervised_metrics_reported": true,
+  "reason": "XGBoost was trained using chronological future-progress deterioration labels.",
+  "projects": 2144,
+  "project_months": 13200,
+  "complete_history_projects": 1358,
+  "risk_distribution": {
+    "LOW": 1029,
+    "MEDIUM": 609,
+    "HIGH": 282,
+    "CRITICAL": 141,
+    "REVIEW_DATA": 83
+  },
+  "anomaly_count": 108,
+  "anomaly_percentage": 5.04,
+  "anomaly_backend": "sklearn_isolation_forest",
+  "score_range": [
+    0.0,
+    97.63
+  ],
+  "schedule_available_projects": 0,
+  "critical_share_pct": 6.58,
+  "predictive_model": {
+    "model_type": "XGBClassifier",
+    "fit_success": true,
+    "test_prediction_success": true,
+    "test_metrics": {
+      "accuracy": 0.8242774566473988,
+      "precision": 0.08560311284046693,
+      "recall": 0.24175824175824176,
+      "f1": 0.12643678160919541,
+      "roc_auc": 0.5846234302610142
+    },
+    "validation_metrics": {
+      "accuracy": 0.8771256171146462,
+      "precision": 0.004830917874396135,
+      "recall": 0.05263157894736842,
+      "f1": 0.008849557522123894,
+      "roc_auc": 0.5024215194305053
+    },
+    "feature_names": [
+      "cost_escalation_pct",
+      "expenditure_ratio_pct",
+      "expenditure_progress_gap",
+      "physical_progress_pct",
+      "progress_change_1m",
+      "progress_change_3m",
+      "progress_velocity_3m",
+      "expenditure_change_1m",
+      "expenditure_change_3m",
+      "expenditure_velocity_3m"
+    ],
+    "leakage_check": {
+      "future_features_used_as_inputs": false,
+      "target_derived_from_future_progress_only": true,
+      "risk_score_used_as_target": false,
+      "risk_category_used_as_target": false,
+      "train_medians_used_for_validation_and_test": true,
+      "temporal_split_respected": true
+    },
+    "integration": {
+      "projects_before_merge": 2144,
+      "predictive_projects": 2144,
+      "projects_after_merge": 2144,
+      "missing_predictions": 0,
+      "predictive_signal_role": "forward-looking probability; does not modify current risk score/category",
+      "final_risk_score_modified": false,
+      "risk_category_modified": false
+    }
+  },
+  "checks": {
+    "no_duplicate_projects": true,
+    "no_duplicate_project_month_keys": true,
+    "risk_scores_nonmissing": true,
+    "risk_scores_in_range": true,
+    "predictive_probability_valid": true,
+    "predictive_risk_bands_valid": true,
+    "no_future_features_used_as_inputs": true,
+    "temporal_split_respected": true,
+    "risk_category_not_overwritten_by_xgboost": true,
+    "final_risk_score_not_overwritten_by_xgboost": true,
+    "review_data_not_critical": true,
+    "priority_queue_one_row_per_project": true
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "model_type": "XGBClassifier",
+  "implementation": "xgboost.XGBClassifier",
+  "model_fit_success": true,
+  "test_prediction_success": true,
+  "target_definition": "future_progress_deterioration = 1 when physical_progress_pct(t+1) < physical_progress_pct(t)",
+  "train_period": [
+    "2026-01_to_2026-02",
+    "2026-02_to_2026-03",
+    "2026-03_to_2026-04",
+    "2026-04_to_2026-05"
+  ],
+  "validation_period": "2026-05_to_2026-06",
+  "test_period": "2026-06_to_2026-07",
+  "train_rows": 7448,
+  "validation_rows": 1823,
+  "test_rows": 1730,
+  "positive_rate_train": 0.00926423200859291,
+  "positive_rate_validation": 0.010422380691168404,
+  "positive_rate_test": 0.05260115606936416,
+  "validation_metrics": {
+    "accuracy": 0.8771256171146462,
+    "precision": 0.004830917874396135,
+    "recall": 0.05263157894736842,
+    "f1": 0.008849557522123894,
+    "roc_auc": 0.5024215194305053
+  },
+  "test_metrics": {
+    "accuracy": 0.8242774566473988,
+    "precision": 0.08560311284046693,
+    "recall": 0.24175824175824176,
+    "f1": 0.12643678160919541,
+    "roc_auc": 0.5846234302610142
+  },
+  "feature_count": 10,
+  "feature_names": [
+    "cost_escalation_pct",
+    "expenditure_ratio_pct",
+    "expenditure_progress_gap",
+    "physical_progress_pct",
+    "progress_change_1m",
+    "progress_change_3m",
+    "progress_velocity_3m",
+    "expenditure_change_1m",
+    "expenditure_change_3m",
+    "expenditure_velocity_3m"
+  ],
+  "latest_prediction_rows": 2144,
+  "predictive_probability_is_primary_signal": true,
+  "binary_prediction_threshold": 0.5,
+  "binary_prediction_is_primary_operational_signal": false,
+  "predictive_risk_bands": {
+    "LOW_PREDICTIVE_SIGNAL": "<0.30",
+    "WATCH": "0.30-<0.50",
+    "ELEVATED": "0.50-<0.70",
+    "HIGH_PREDICTIVE_SIGNAL": ">=0.70"
+  },
+  "predictive_risk_band_distribution": {
+    "LOW_PREDICTIVE_SIGNAL": 1413,
+    "WATCH": 428,
+    "ELEVATED": 239,
+    "HIGH_PREDICTIVE_SIGNAL": 64
+  },
+  "leakage_check": {
+    "future_features_used_as_inputs": false,
+    "target_derived_from_future_progress_only": true,
+    "risk_score_used_as_target": false,
+    "risk_category_used_as_target": false,
+    "train_medians_used_for_validation_and_test": true,
+    "temporal_split_respected": true
+  },
+  "model_parameters": {
+    "n_estimators": 200,
+    "max_depth": 3,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "random_state": 42,
+    "scale_pos_weight": 106.94202898550725
+  },
+  "july_predictions_note": "July predictions are forward-looking predictions for the next month. They are not evaluated because August 2026 ground truth is unavailable.",
+  "model_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-11\\referenced-chatgpt-conversation-this-is-an\\models\\pragati_xgboost_model.joblib"
+}

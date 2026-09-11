@@ -1,0 +1,23 @@
+{
+  "backend": "sklearn_isolation_forest",
+  "model_type": "IsolationForest",
+  "implementation": "sklearn.ensemble.IsolationForest",
+  "fit_executed": true,
+  "contamination": 0.05,
+  "random_state": 42,
+  "n_estimators": 300,
+  "observations": 2144,
+  "features_used": [
+    "cost_escalation_pct",
+    "expenditure_ratio_pct",
+    "physical_progress_pct",
+    "expenditure_progress_gap",
+    "progress_velocity_3m",
+    "expenditure_velocity_3m"
+  ],
+  "number_of_projects_used": 2144,
+  "number_of_anomalies": 108,
+  "anomaly_rate": 0.050373,
+  "anomaly_rate_percent": 5.04,
+  "model_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-11\\referenced-chatgpt-conversation-this-is-an\\models\\pragati_isolation_forest.joblib"
+}
