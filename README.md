@@ -1,6 +1,6 @@
 # Project Pragati — SIH 2026 Problem 26013
 
-This is a reproducible prototype for current-state project risk scoring and early warning over the supplied Jan–Jul 2026 monitoring extract. It is **not** presented as a supervised predictor of future failure: the supplied data has seven monthly observations but no defensible future-risk outcome label.
+This is a reproducible prototype for the current-state project risk scoring and early warning over the supplied Jan–Jul 2026 monitoring extract. It is **not** presented as a supervised predictor of future failure: the supplied data has seven monthly observations but no defensible future-risk outcome label.
 
 ## Run
 
